@@ -1,12 +1,16 @@
 // ── Navbar scroll effect ─────────────────────────────
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
+
+function updateNavbar() {
   if (window.scrollY > 20) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-});
+}
+
+window.addEventListener('scroll', updateNavbar);
+updateNavbar(); // run on page load in case of refresh mid-scroll
 
 // ── Mobile nav toggle ────────────────────────────────
 const navToggle = document.getElementById('navToggle');

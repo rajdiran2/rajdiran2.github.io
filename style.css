@@ -91,6 +91,15 @@ img { max-width: 100%; }
 .kiln-btn { background: var(--indigo-500); }
 .kiln-btn:hover { background: #4f46e5; }
 
+.btn-coming-soon {
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid var(--border);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.btn-coming-soon:hover { background: transparent; transform: none; box-shadow: none; }
+
 /* ── Section Labels & Titles ─────────────────────── */
 .section-label {
   display: inline-block;
@@ -135,10 +144,12 @@ img { max-width: 100%; }
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 0;
-  transition: all .3s ease;
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
 }
 .navbar.scrolled {
-  background: rgba(255,255,255,.95);
+  background-color: rgba(255,255,255,.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--border);
 }
@@ -348,7 +359,7 @@ img { max-width: 100%; }
 
 .apps-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 .app-card {
@@ -367,7 +378,8 @@ img { max-width: 100%; }
   justify-content: space-between;
 }
 .tariffmate-header { background: linear-gradient(135deg, #0d9488, #0891b2); }
-.kiln-header { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+.pedicare-header  { background: linear-gradient(135deg, #ec4899, #f97316); }
+.kiln-header      { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
 
 .app-icon-wrap { }
 .app-icon {
